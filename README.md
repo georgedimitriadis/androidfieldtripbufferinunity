@@ -1,6 +1,6 @@
 # README #
 
-These are three Android Studio and one Unity projects.
+These are three Android Studio and one Unity project.
 
 The FieldtripServerService creates an Android  service (with no activity) that starts, stops and controls a Fieltrip buffer server.
 
@@ -33,5 +33,3 @@ The UnityFieldtripBufferServicesController project gives an example of this setu
 * Dependencies
 The Services depend on the basic Java  fieldtripbufferserver and fieldtripbufferclient implementations of the fieldtrip buffer.
 The FieldtripBufferServicesController has no dependencies. This must be kept like this because it is very difficult to add any extra jar dependencies on an Android Unity plugin. That is the main reason for the current design architecture (native services controlled by a plugin through Intents).
-
-
