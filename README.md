@@ -4,13 +4,13 @@ These are three Android Studio and one Unity project.
 
 The FieldtripServerService creates an Android  service (with no activity) that starts, stops and controls a Fieltrip buffer server.
 
-The FieldtripCLientsService creates an Android service (with no activity) that starts, stops and  controls a number of Fieltrip buffer clients. More clients can be added as classes, extensions of ThreadBase.
+The FieldtripClientsService creates an Android service (with no activity) that starts, stops and  controls a number of Fieltrip buffer clients. More clients can be added as classes, extensions of ThreadBase.
 
 Both the services are designed to communicate with another app through Intents.
 
 The FieldtripBufferServicesController is an Android project designed to be a plugin to Unity. It allows communication with the FieldtripServerService and the FieldtripClientsService and exposes a number of functions that can be used to do this communication.
 
-The UnityFieldtripServicesController is a Unity Android project that can be used as a base to create other Untiy Android projects which can control the Fieldtrip Buffer Services. It also incorporates a Fieldtrip Buffer client (written in C#) which allows a Unity project to instantiate its own client and read and write form and to the Fieldtrip Buffer Server running on the device.      
+The UnityFieldtripServicesController is a Unity Android project that can be used as a base to create other Untiy Android projects which can control the Fieldtrip Buffer Services. It also incorporates a Fieldtrip Buffer client (written in C#) which allows a Unity project to instantiate its own client and read and write from and to the Fieldtrip Buffer Server running on the device.      
 
 
 Versions:
