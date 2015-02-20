@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{9934C72B-048E-DB85-3D1A-DBD384940B49}</ProjectGuid>
+	<ProjectGuid>{F1FACFFD-2A5B-D672-901E-567CC664E6FB}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -66,6 +66,8 @@
      <Compile Include="Assets\Scripts\FieldTrip.Buffer\SocketChannel.cs" />
      <Compile Include="Assets\Scripts\FieldTrip.Buffer\UnityBuffer.cs" />
      <Compile Include="Assets\Scripts\FieldTrip.Buffer\WrappedObject.cs" />
+     <Compile Include="Assets\Scripts\MovingWithAlphaLatEvents.cs" />
+     <Compile Include="Assets\Scripts\ServerAndFilePlaybackControler.cs" />
      <Compile Include="Assets\Scripts\TestingFBClient.cs" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Android\res\values\strings.xml" />

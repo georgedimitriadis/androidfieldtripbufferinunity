@@ -15,14 +15,13 @@ public class TestingFBClient : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 
 
 	private void eventsAdded(UnityBuffer _buffer, EventArgs e){
-		BufferEvent ev = _buffer.getLatestEvent();
-		Debug.Log (ev.getType().toString()+": "+ev.getValue().toString());
+		BufferEvent latestEvent = _buffer.getLatestEvent();
+		Debug.Log (latestEvent.getType().toString()+": "+latestEvent.getValue().toString());
 	}
 
 
