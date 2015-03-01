@@ -237,6 +237,34 @@ public class FieldTripClientsService extends Service {
                 threads.get(id).setArguments(arguments);
                 updater.update = true;
                 break;
+            case C.THREAD_UPDATE_ARG_FROM_STR:
+                String argumentAsString = intent.getStringExtra(C.THREAD_STRING_FOR_ARG);
+                id = intent.getIntExtra(C.THREAD_ID, -1);
+                String argDescription = argumentAsString.split(":")[0];
+                int argType = Integer.getInteger(argumentAsString.split(":")[1]);
+                String argValueStr = argumentAsString.split(":")[2];
+                Log.i(C.TAG, "Received Argument "+argDescription+" to update in thread "+id+" with value "+argValueStr);
+                Argument argument;
+                switch (argType){
+                    case Argument.TYPE_BOOLEAN:
+                        argument = new Argument(argDescription, String.valueOf(argValueStr));
+                        break;
+                    case Argument.TYPE_DOUBLE_SIGNED:
+                    case Argument.TYPE_DOUBLE_UNSIGNED:
+                        argument = new Argument(argDescription, String.valueOf(argValueStr));
+                        break;
+                    case Argument.TYPE_INTEGER_SIGNED:
+                    case Argument.TYPE_INTEGER_UNSIGNED:
+                        argument = new Argument(argDescription, String.valueOf(argValueStr));
+                        break;
+                    case Argument.TYPE_STRING:
+                    default:
+                        argument = new Argument(argDescription, argValueStr);
+                        break;
+                }
+                threads.get(id).setArgument(argument);
+                updater.update = true;
+                break;
 			default:
 			}
 		}

@@ -179,7 +179,7 @@ public class ClientsController {
         return allArguments.get(threadID).length;
     }
 
-    //Does not implement TYPE_CHECK
+    //Does not implement TYPE_CHECK and TYPE_RADIO
     //Creates an array of strings, each with "argumentDescription:argumentValue" for each argument
     public String[] getThreadArguments(int threadID){
         Argument[] arguments = allArguments.get(threadID);
@@ -190,7 +190,6 @@ public class ClientsController {
             int type = argument.getType();
             result[i] = argument.getDescription()+":";
             switch (type){
-                case TYPE_RADIO:
                 case TYPE_INTEGER_SIGNED:
                 case TYPE_INTEGER_UNSIGNED:
                     result[i]+=argument.getInteger().toString();
@@ -210,9 +209,10 @@ public class ClientsController {
         return result;
     }
 
-    //Assumes that each string in String[] carries the argument info as:
-    //ArgDescription:ArgValue
-    public void setThreadArguments(int threadID, String[] arguments){
+    //Assumes that the argument String carries the argument info as:
+    //ArgDescription:ArgType:ArgValue where the ArgType is the corresponding int
+    public void setThreadArgument(int threadID, String argument){
+
 
     }
 

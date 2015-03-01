@@ -1,7 +1,10 @@
 package bmird.radboud.fieldtripclientsservice.base;
 
+import android.util.Log;
+
 import java.io.IOException;
 
+import bmird.radboud.fieldtripclientsservice.C;
 import nl.fcdonders.fieldtrip.bufferclient.BufferClient;
 import nl.fcdonders.fieldtrip.bufferclient.Header;
 
@@ -45,6 +48,17 @@ public abstract class ThreadBase {
 	public void setArguments(final Argument[] arguments) {
         this.arguments = arguments;
 	}
+
+    public void setArgument(final Argument argument){
+        String argDescription = argument.getDescription();
+        for(Argument arg : this.arguments){
+            if(arg.getDescription() == argDescription){
+                arg = argument;
+                return;
+            }
+        }
+        Log.i(C.TAG, "Argument "+argDescription+" does not exist.");
+    }
 
 	public void setHandle(final AndroidHandle android) {
 		this.android = android;
