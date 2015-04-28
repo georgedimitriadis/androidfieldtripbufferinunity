@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="fieldtripbufferservicecontroller">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/fieldtripbufferservicecontroller</output-path>
+    <root id="archive" name="fieldtripbufferservicecontroller.jar">
+      <element id="library" level="project" name="support-annotations-21.0.3" />
+      <element id="module-output" name="app" />
+    </root>
+  </artifact>
+</component>
