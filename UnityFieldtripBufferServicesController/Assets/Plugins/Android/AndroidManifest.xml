@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bmird.radboud.fieldtripbufferservicecontroller" >
+    package="edu.nl.ru.fieldtripbufferservicecontroller" >
     <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="16"/>
 
     <application
@@ -8,7 +8,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name">
         <activity
-            android:name=".MainActivity"
+            android:name="edu.nl.ru.fieldtripbufferservicecontroller.MainActivity"
             android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
             android:exported="true"
             android:label="@string/app_name" >
@@ -20,11 +20,11 @@
         </activity>
 
         <receiver
-            android:name=".FBServiceControllerBroadcastReceiver"
+            android:name="edu.nl.ru.fieldtripbufferservicecontroller.FBServiceControllerBroadcastReceiver"
             android:enabled="true"
             android:exported="true" >
             <intent-filter>
-                <action android:name="bmird.radboud.fieldtripbufferservicecontroller.action.UPDATEINFO" />
+                <action android:name="edu.nl.ru.fieldtripbufferservicecontroller.action.UPDATEINFO" />
             </intent-filter>
         </receiver>
     </application>

@@ -58,7 +58,8 @@
     <string name="client_flushedevents">Flushed events.</string>
     <string name="client_flushheader">Flushed header.</string>
     <string name="client_poll">Polling.</string>
-    <string name="client_wait"> Waiting, &lt;sub&gt;&lt;small&gt;s&lt;/small&gt;&lt;/sub&gt; %0$d n&lt;sub&gt;&lt;small&gt;e&lt;/small&gt;&lt;/sub&gt; %1$d, %2$d ms.</string> <!--  -->
+    <string name="client_wait"> Waiting, &lt;sub&gt;&lt;small&gt;s&lt;/small&gt;&lt;/sub&gt; %0$d n&lt;sub&gt;&lt;small&gt;e&lt;/small&gt;&lt;/sub&gt; %1$d, %2$d ms.</string>
+    <!--  -->
     <string name="client_stopwaiting">Stopped waiting.</string>
 
 
